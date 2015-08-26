@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  get 'status/index'
+
   #get 'dashboard/index'
 
   post 'dashboard/index', defaults: {format: 'xml' }
 
   get 'dashboard/index'
+
+  post 'dashboard/status', defaults: {format: 'xml'}
+
+  get 'dashboard/status'
 
 
 
