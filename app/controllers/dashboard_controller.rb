@@ -22,7 +22,8 @@ class DashboardController < ApplicationController
   	if status == "completed"
 		
   		response = Twilio::TwiML::Response.new do |r|
-  			r.Sms "Received a message" to: "+19544961832" 
+  			r.Sms "Received a message"
+  			r.to "+19544961832 "
   		end
   		render text: response.text
   	end
